@@ -44,7 +44,7 @@ def parse_args():
     parser.add_argument('file', help='The log file to analyze.')
     parser.add_argument('-a', '--auto', action='store_true', help='Automatically analyze the log file.')
     parser.add_argument('-d', '--date', action='store_true', help='Search for dates.', dest='date_flag')
-    parser.add_argument('-D', '--directory', action='store_true', help='Directory of wordlist files.', dest='directory_flag')
+    parser.add_argument('-D', '--directory', action='store_true', help='Search for directories.', dest='directory_flag')
     parser.add_argument('-e', '--email', action='store_true', help='Search for email addresses.', dest='email_flag')
     parser.add_argument('-H', '--hash', action='store_true', help='Search for hashes.', dest='hash_flag')
     parser.add_argument('-i', '--ip', action='store_true', help='Search for IP addresses.', dest='ip_flag')
