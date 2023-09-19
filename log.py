@@ -606,7 +606,7 @@ def main():
 
                 # Print note if user agents are found
                 if found_userAgent:
-                    print(f'{Text.orange}#Note:{Text.end}  Possible user agents have been identified.\n\tUse either -g or -c to get more information.')
+                    print(f'{Text.orange}#Note:{Text.end}  Possible user agents have been identified.\n\tUse either -g or -C to get more information.')
 
                 # If no results are found, print an error message and exit
                 if not found_result:
