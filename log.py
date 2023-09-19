@@ -209,7 +209,7 @@ def list_columns(file, column, separator, addition, rows=None):
                         # Combine data from specified columns
                         combined_col_data = separator.join(columns[col - 1] for col in col_range)
                     except IndexError:
-                        print(f'Error on line {line_number}: {line}')
+                        continue
 
                     # If the addition flag is set, try to sum up the data
                     if addition:
@@ -395,9 +395,10 @@ def search(file, pattern_key):
         for key, value in sorted_ips:
             output.append(f'{key}: {Text.purpleBold}{value}{Text.end}')
         
-        output.append(f"\n{Text.blue}#TOTAL {ip_type} IP Addresses: {len(ips[ip_type].items())}{Text.end}")
+        output.append(f"\n{Text.blue}#TOTAL {ip_type} IP Addresses: {sum(ips[ip_type].values())}{Text.end}")
         output.append(f'{Text.orange}UNIQUE {ip_type} IP Addresses: {len(ips[ip_type])}{Text.end}\n')
         return output
+
     
     def process_counts(counts, description, pattern_key):
         """Process counts and return a formatted output"""
