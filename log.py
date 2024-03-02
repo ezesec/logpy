@@ -203,7 +203,7 @@ def list_columns(file, column, separator, addition, rows=None):
                     if specific_rows and line_number not in specific_rows:
                         continue
             
-                    columns = line.strip().split(separator)
+                    columns = line.strip().split() if separator == ' ' else line.strip().split(separator)
 
                     try:
                         # Combine data from specified columns
